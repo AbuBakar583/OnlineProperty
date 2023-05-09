@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model OnlineProperty.Pages.DeleteProperty.IndexModel
+@{
+    ViewData["Title"] = "Delete Property";
+}
+
+<h1>Delete Property</h1>
+
+<p>Are you sure you want to delete property "@Model.Property.Name"?</p>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Property.Id" />
+    <button class="btn btn-danger" type="submit">Delete Property</button>
+</form>

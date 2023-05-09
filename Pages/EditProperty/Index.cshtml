@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model OnlineProperty.Pages.EditProperty.IndexModel
+@{
+    ViewData["Title"] = "Edit Property";
+}
+
+<h1>Edit Property</h1>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Property.Id" />
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" type="text" name="Name" value="@Model.Property.Name" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" name="Description" required>@Model.Property.Description</textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input class="form-control" type="number" name="Price" value="@Model.Property.Price" required />
+    </div>
+    <button class="btn btn-primary" type="submit">Save Property</button>
+</form>

@@ -1,0 +1,23 @@
+﻿@page
+@model OnlineProperty.Pages.AddProperty.IndexModel
+@{
+    ViewData["Title"] = "Add Property";
+}
+
+<h1>Add Property</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input class="form-control" type="text" name="Name" required />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <textarea class="form-control" name="Description" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input class="form-control" type="number" name="Price" required />
+    </div>
+    <button class="btn btn-primary" type="submit">Add Property</button>
+</form>

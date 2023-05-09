@@ -1,0 +1,28 @@
+﻿@page
+@model OnlineProperty.Pages.Properties.IndexModel
+@{
+    ViewData["Title"] = "Properties";
+}
+
+<h1>Properties</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var property in Model.Properties)
+        {
+            <tr>
+                <td>@property.Name</td>
+                <td>@property.Description</td>
+                <td>@property.Price.ToString("C")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
